@@ -10,6 +10,6 @@ int main(void)
         sum += number;          //count ++;
     }
     
-    printf("%d\n",sum);    
+    printf("%d numbers sum up euqare %d\n",count,sum);    
     return 0;
 }
