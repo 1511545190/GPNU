@@ -3,6 +3,7 @@ struct arch {
     int ele1;
     char cha;
 };
+
 void Input(struct arch*);     //通过函数修改结构
 struct arch MakeSt();          //通过函数创建并返还结构
 void Show(const struct arch init);     //显示结构
@@ -16,6 +17,7 @@ int main(void)
     Show(a);
     a = MakeSt();
     Show(a);
+
     //结构数组
     typedef struct time
     {
@@ -23,7 +25,6 @@ int main(void)
         int m;
         int s;
     }Time;
-
     Time time[4];
     for(int i = 0;i<4;i++)
     {
