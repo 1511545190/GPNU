@@ -10,12 +10,12 @@ int main(void)
 
     uct = bjt - 8*60;           //时间间隔 8h
 
-    if(uct>=0)
+    if(uct>=0)                 //在同一天
     {
         
         printf("%d\n",uct/60*100 + uct%60);
     }
-    else
+    else                         //纽约时间在后一天
     {
         uct = uct + 24*60;
         printf("%d\n",uct/60*100 + uct%60);
