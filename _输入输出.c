@@ -21,7 +21,7 @@ int main(void)
     //printf("%u");用 %u的格式看待机器码   11111111
     printf("%%u:%u(-1)",-1);  
 
-    printf("\t%.0f\t",pow(2,32)-1);    //%u 4个字节 32位
+    printf("\t%.0f\t",pow(2,32)-1);    //%u 4个字节 32位     //%hh一个字节
 
     // 0八 0x十六
     // %o %x or %X
