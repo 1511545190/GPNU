@@ -50,3 +50,32 @@ int main()
     
     return 0;  
 }
+
+/*
+//字符串储存的是地址,指针数组
+    char *str[10] = {"ling","yi","er","san","si","wu","liu","qi","ba","jiu",};
+    int number;
+    int digits = 1;
+    scanf("%d",&number);
+    if(number<0) printf("fu ");
+    int nu = (int)fabs(number);
+    
+    number = nu;
+    while(nu>9)
+    {
+        nu/=10;
+        digits*=10;
+    }
+    nu = number;
+    while(digits !=0)
+    {
+        int d = nu/digits;
+        nu%=digits;
+        digits/=10;
+
+        printf("%s",str[d]);
+        if(digits!=0)printf(" ");   //最后一个不执行，便和入口一样
+        
+    }
+
+*/
