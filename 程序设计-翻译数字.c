@@ -15,7 +15,7 @@ int main()
     int num = fabs(number);
     number =num;
 
-    while(num>9)
+    while(num>9)            //num>9 可使得位数少1
     {
         num/=10;
         count*=10;
