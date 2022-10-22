@@ -32,6 +32,23 @@ int main()
         p++;
     }
 
+    
+    //二维数组指针
+        int arry[3][5] ={
+        {1,2,3,4,5},
+        {6,7,8,9,10},
+        {11,12,13,14,15}
+    };
+    int (*p)[5] = arry;
+    for(int i = 0;i<3;i++)
+    {
+        for(int j = 0;j<5;j++)  
+        {
+            printf("%d,",*(*(p+i)+j));
+            
+        }
+        printf("\n");
+    }
     //以数组为返回值
     int *fun();
     int* arr;
@@ -71,6 +88,12 @@ int main()
         printf("string %s\n", pointer[i]);
 
     }
+    
+    char *str = "hello";
+    while(str)
+    {
+        printf("%c",str++);
+    }
 
     //--------------------------------------------------
 
@@ -80,8 +103,7 @@ int main()
 }
 
 int* fun(){
-    static int r[3] = {1,2,3};
+    static int r[3] = {1,2,3};   //返回指针
     return r;
-
 
 }
