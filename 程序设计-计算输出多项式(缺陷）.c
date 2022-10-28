@@ -36,25 +36,34 @@ int main(void)
 
             if(i== max_index)//最高次时
             {
-                if(i ==1)
+                if(i ==1) //最高一次
                 {
-                    printf("%dx",power[i]);
+                    //系数为1省略
+                    if(power[i]==1)printf("x");
+                    else if(power[i]==-1)printf("-x");
+                    else printf("%dx",power[i]);
                     
-                }else if(i ==0)
+                }else if(i ==0)//最高零次
                 {
                     printf("%d",power[i]);
                     
                 }else{
-                    printf("%dx%d",power[i],i);
+                    if(power[i]==1)printf("x%d",i);
+                    else if(power[i]==-1)printf("-x%d",i);
+                    else printf("%dx%d",power[i],i);
                 }
             }else{//不是最高次
                 
                 if(i==0){
                     printf("%+d",power[i]);
                 }else if(i==1){
-                    printf("%+dx",power[i]);
+                    if(power[i]==1)printf("+x");
+                    else if(power[i]==-1)printf("-x");
+                    else printf("%+dx",power[i]);
                 }else{
-                    printf("%+dx%d",power[i],i);
+                    if(power[i]==1)printf("+x%d",i);
+                    else if(power[i]==-1)printf("-x%d",i);
+                    else printf("%+dx%d",power[i],i);
                 }
             }
 
