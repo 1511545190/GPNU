@@ -1,5 +1,24 @@
 #include <stdio.h>
 #include <string.h>
+void PrintArray(int *p,int n){
+    for(int i=0;i<n;i++){
+        printf("%d",p[i]);  //与*(p+i)相同
+    }
+}
+void In(int a[],int n){    //两个都可以改变数组的值
+    for(int i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+}
+void input2(int (*p)[N], int n,int m){
+    int i,j;
+    for(i=0;i<n;i++){
+        for(j=0;j<n;j++){
+            printf("%d",*(*(p+i)+j));
+        }
+    }
+}
 int main()
 {
     /* 
@@ -98,8 +117,30 @@ int main()
 
     //--------------------------------------------------
 
+    int i=0,j=0;
+    int b[2][3]; // 2个 int [3]
+    int (*p)[3];  // 基类型 为 int [3] ,
+    //括号防止p与[]先结合 ,[]优先级高于*
+    p = b;// &a[0]指向第0行
+    *(p+i);//第i行第0列地址
+    *(p+i)+j; //指向第i行第j列地址
+    *(*(p+i)+j); //指向第i行第j值
 
-    (char*) pointer; 
+    
+    int Arry[2][N]={23,435,543,534,232,  434,543453,6456,63333,244};
+    //int *P = *Arry;
+    
+    // int *P;
+    //P = *Arry;        //列指针指向第一个元素
+
+    printf("%d",*P); 
+
+    //字符指针数组
+    char *str[] = {"I","love","you"};
+    // printf("%p","A");
+    
+
+    
     return 0;
 }
 
