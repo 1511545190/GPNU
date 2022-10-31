@@ -61,11 +61,16 @@ int main(void)
     -------------------------------
     int *const p2 =a;
     int c =0;
-    // p2 = &c;p2++;  不可，常量指针，地址只有一个
+    // p2 = &c; p2++;  不可，常量指针，地址只有一个
         c = 1;
     int *p1 = a;
     p1 =&c;
 
+    const int n =100;
+    const int* p=&n;  //不能通过此指针来修改
+    int *q = &n; //可以通过此指针来修改
+    
+    *p = 12;
     //指针所指向的量不能够通过指针被改变
     int const *p2 =a;   //const int *p2
     a++;a=1;  p2 = &c;//ok
