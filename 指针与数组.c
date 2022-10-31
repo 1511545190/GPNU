@@ -72,7 +72,8 @@ int main()
  /* 
  char* pointer
  指针数组,存放指针的数组
- //替代二维数组存储字符串
+ //替代二维数组存储字符串  
+ 字符串指针数组
   */   
     char *pointer[5] = {
         "the first string",
@@ -103,7 +104,7 @@ int main()
 }
 
 int* fun(){
-    static int r[3] = {1,2,3};   //返回指针
+    static int r[3] = {1,2,3};   //从函数返回数组必须用全局静态变量！！！！！
     return r;
 
 }
