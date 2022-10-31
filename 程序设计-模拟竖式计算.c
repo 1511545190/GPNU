@@ -13,4 +13,29 @@ int main()
         n = ret*10;
         i++;
     }
+
+    //模拟111111....../x
+    int x;
+    int cnn =1;
+    int single_number = 1;
+    scanf("%d",&x);
+    while(x>single_number){            
+        single_number=single_number*10 +1;   //从上面滑下来的
+        cnn++;
+    }
+    
+    while(single_number%x!=0){
+        
+        printf("%d",single_number/x);
+        cnn++;
+        single_number = single_number%x*10 + 1;
+        
+    }
+    printf("%d",single_number/x);  //当%后==0时，要输出1
+
+    printf(" %d",cnn);
+
+    
+    
+    
 }
