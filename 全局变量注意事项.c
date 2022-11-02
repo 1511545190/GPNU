@@ -8,7 +8,9 @@ void fun(){
     static int sa = 0;// 全局静态变量，但可以修改值
     sa++;
 }
+
 static int f();   //静态函数，只能在此文件中用
+
 //返回本地变量的地址是危险的，野指针
 //返回全局变量的指针是合适的
 void f()
@@ -19,6 +21,23 @@ void f()
     printf("%d,%p\n",a,&a);   //只是生存期不同
     a++;
 };
+
+//声明变量
+/*其中，变量在头部就已经被声明，但是定义与初始化在主函数内*/
+extern int outline; //可以在别的文件初始化，通常放在头文件
+int x;
+int y;
+int add_two()
+{
+    //声明变量为外部变量
+    extern int x;
+    extern int y;   //不构成重复定义
+    //初始化
+    x = 1;
+    y = 2;
+    return x + y;
+}
+
 
 int main(void)
 {
