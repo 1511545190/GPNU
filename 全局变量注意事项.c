@@ -4,6 +4,10 @@
 //int a = b; (b 非 const int)
 int a = 0;
 
+void fun(){
+    static int sa = 0;// 全局静态变量，但可以修改值
+    sa++;
+}
 static int f();   //静态函数，只能在此文件中用
 //返回本地变量的地址是危险的，野指针
 //返回全局变量的指针是合适的
