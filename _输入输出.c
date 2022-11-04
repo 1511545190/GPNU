@@ -110,6 +110,12 @@ int main(void)
     printf("%d", 093 -11);//不可，进制不一
     
     printf("%+d"); //显示符号
+    
+    int number[N];
+    for(int i =0 ;i<N;i++){
+
+        int ret = scanf("%1d",&number[i]);  //获得一位数字
+    }
 
     
     return 0;
