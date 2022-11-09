@@ -116,7 +116,9 @@ int main(void)
 
         int ret = scanf("%1d",&number[i]);  //获得一位数字
     }
-
+    
+    scanf("%d",&n);//不读入换行符
+    gets(char[]); //读入换行符
     
     return 0;
 }
