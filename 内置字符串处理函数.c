@@ -14,6 +14,13 @@ int main(){
     strcpy(str1,str2);
     //strcat(str2,"A");
 
+    while(*str1++=*str2++) //copy the string
+    
+        do{
+            *str1 = *str2++
+            }while(*str1++)
+
+
 
 
 
@@ -23,3 +30,5 @@ int main(){
     //-1 str2 bigger
     return 0;
 }
+
+
