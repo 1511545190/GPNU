@@ -17,8 +17,8 @@ int main(){
     while(*str1++=*str2++) //copy the string
     
         do{
-            *str1 = *str2++
-            }while(*str1++)
+            *str1++ = *str2++
+            }while(*str2)
 
 
 
@@ -29,6 +29,34 @@ int main(){
     //0 equal
     //-1 str2 bigger
     return 0;
+}
+
+liu|:~$ cat string.c
+#include <stdio.h>
+void mycopy(char *str1, char *str2);
+int main()
+{
+        char str1[] = "nihao123";
+        char str2[] = "hello=";
+        /*字符串指针是指针变量，不要进行赋非指针量*/
+
+        printf("str2 :%s\n",str2);
+        mycopy(str1,str2);
+        printf("str1 :%s\n",str1);
+
+        return 0;
+
+}
+
+void mycopy(char *str1, char *str2)
+{
+        //这里的指针是call by value，所以对它进行
+        //的++操作不会影响到函数之外的数组
+        do{
+                *str1++ = *str2++;
+        }while(*str2);
+        return;
+    
 }
 
 
