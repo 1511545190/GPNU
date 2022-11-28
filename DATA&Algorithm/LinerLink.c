@@ -29,7 +29,8 @@ bool Insert(List L, ElementType X, Position P)
     //有头节点就不用改变头部了，直接用next访问，不需要指针的指针来改变指针
     Position pre;//查找前一个节点
                         //找到了或者到最后了
-    //pre没有malloc没有指针域，当传入的是头结点的下一个一个节点的时候for语句才真正可以执行
+    //pre没有malloc没有指针域，当传入的是头结点的下一个一个节点的时候
+    //直接用next访问for语句才真正可以执行
     for(pre=L;pre->Next!=P && pre;pre=pre->Next);
     
     if(pre == NULL)//没找到
@@ -88,19 +89,18 @@ bool Delete(List L, Position P)
 int main()
 {
     List list = setup();
-    Position temp = list ;//用于保存头指针的首地址，下面遍历要用到头节点
-
+    Position i = list;
+    //Position e = list->Next;//只复制一级地址
     int count;
-    for(count = 0;count<5;count++,list=list->Next)
+    for(count = 0;count<5;count++,i=i->Next)
     {
-        Insert(list,count+1,list->Next);
+        Insert(list,count+1,i->Next);
     }
-    list = temp;
-    for(count = 0;count<5;count++,list=list->Next)
+    i = list;
+    for(count = 0;count<5;count++,i=i->Next)
     {
-                printf("%d ",list->Next->Data);
+        printf("%d ",i->Next->Data);
     }
-    list = temp;
 
 
 
