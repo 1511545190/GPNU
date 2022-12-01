@@ -4,6 +4,7 @@ typedef struct  a
 {
     int a;
 }A;
+//要修改指针，要用指针的指针
 void change(A*in)     //依然属于传值；结构体指针相当于形参
 {
     A *in2;//只有指针没有空间不可访问
