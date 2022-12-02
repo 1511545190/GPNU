@@ -25,7 +25,7 @@ printf("int \n",sizeof(int));
 int a =2147483647;
 //溢出 从-2147483648 开始计算，每溢出1 值增加1, -2147483647
 printf("%d",a);
-printf("char %d\n",sizeof(char));
+printf("char %d\n",sizeof(char));//一个字节
 printf("\n",sizeof(float));//32位
 printf("\n",sizeof(double));//64位
 printf("\n",sizeof(long int));
