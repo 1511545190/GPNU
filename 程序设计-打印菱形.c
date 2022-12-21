@@ -1,14 +1,5 @@
 #include <stdio.h>
-/*
-7
-      * 
-    * * *
-  * * * * *
-* * * * * * *
-  * * * * *
-    * * *
-      *
-*/
+#include <iostream>
 #include <math.h>
 int main(void)
 {
@@ -36,6 +27,24 @@ int main(void)
         }
         printf("\n");
     }
-    
+
+
+
+    //打印菱形
+     n = 5;
+    for(int i =0;i<n;i++)
+    {
+        //打印空白
+        for(int j =0;j<fabs(i - n/2);j++)
+        {
+            std::cout<<" ";
+        }
+        for(int j =0;j<(n/2 - fabs(i-n/2))*2 +1;j++)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+     
     return 0;
 }
